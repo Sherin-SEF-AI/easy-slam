@@ -2,6 +2,8 @@
 
 **EasySLAM** is a production-ready Python package that makes Simultaneous Localization and Mapping (SLAM) accessible to beginners while providing advanced features for researchers and professionals.
 
+🌐 **Website**: https://easyslam.ai
+
 [![PyPI version](https://badge.fury.io/py/easy-slam.svg)](https://badge.fury.io/py/easy-slam)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.7+](https://img.shields.io/badge/python-3.7+-blue.svg)](https://www.python.org/downloads/)
