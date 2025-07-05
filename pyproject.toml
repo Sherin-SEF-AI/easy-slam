@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "easy-slam"
+version = "0.1.0"
+description = "Beginner-friendly yet powerful SLAM library for robotics and research"
+authors = [
+    { name = "sherin joseph roy", email = "sherin.joseph2217@gmail.com" }
+]
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.7"
+dependencies = [
+    "numpy",
+    "opencv-python",
+    "scipy",
+    "matplotlib",
+    "pyyaml"
+]
+
+[project.optional-dependencies]
+3d = ["open3d"]
+realsense = ["pyrealsense2"]
+g2o = ["python-g2o"]
+dev = ["pytest", "sphinx", "jupyter", "black", "flake8"]
+
+[project.urls]
+Source = "https://github.com/Sherin-SEF-AI/EasySLAM"
+
+[project.scripts]
+easy-slam = "easy_slam.__main__:main"
+easy-slam-gui = "easy_slam.gui.__main__:main" 
