@@ -1,0 +1,105 @@
+/* Custom styles for EasySLAM documentation */
+
+/* Header styling */
+.wy-side-nav-search {
+    background-color: #667eea;
+}
+
+.wy-side-nav-search input[type=text] {
+    border-color: #764ba2;
+}
+
+/* Navigation styling */
+.wy-nav-side {
+    background: #2d3748;
+}
+
+.wy-menu-vertical a {
+    color: #e2e8f0;
+}
+
+.wy-menu-vertical a:hover {
+    background-color: #667eea;
+}
+
+/* Content styling */
+.wy-nav-content {
+    background: #ffffff;
+}
+
+.wy-nav-content-wrap {
+    background: #ffffff;
+}
+
+/* Code blocks */
+.highlight {
+    background: #f7fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+}
+
+.highlight pre {
+    background: #2d3748;
+    color: #e2e8f0;
+    border-radius: 6px;
+}
+
+/* Links */
+a {
+    color: #667eea;
+}
+
+a:hover {
+    color: #764ba2;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    background: #667eea;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 4px;
+    margin: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background: #764ba2;
+    color: white;
+    text-decoration: none;
+}
+
+/* Admonitions */
+.admonition {
+    border-radius: 6px;
+    border-left: 4px solid #667eea;
+}
+
+.admonition-title {
+    background: #667eea;
+    color: white;
+}
+
+/* Tables */
+.wy-table-responsive table td,
+.wy-table-responsive table th {
+    border: 1px solid #e2e8f0;
+}
+
+.wy-table-responsive table th {
+    background: #f7fafc;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .wy-nav-side {
+        width: 100%;
+        position: relative;
+    }
+    
+    .wy-nav-content-wrap {
+        margin-left: 0;
+    }
+} 

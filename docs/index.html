@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasySLAM - Production-ready Python SLAM Package</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            color: white;
+            padding: 60px 0;
+        }
+
+        .header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header p {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .badges {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        .badge {
+            background: rgba(255,255,255,0.2);
+            padding: 8px 16px;
+            border-radius: 20px;
+            color: white;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .badge:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-2px);
+        }
+
+        .main-content {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section h2 {
+            color: #667eea;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        .section h3 {
+            color: #764ba2;
+            font-size: 1.5rem;
+            margin: 25px 0 15px 0;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 30px 0;
+        }
+
+        .feature-card {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 15px;
+            border-left: 5px solid #667eea;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .feature-card h4 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+
+        .code-block {
+            background: #2d3748;
+            color: #e2e8f0;
+            padding: 20px;
+            border-radius: 10px;
+            font-family: 'Courier New', monospace;
+            margin: 20px 0;
+            overflow-x: auto;
+        }
+
+        .install-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+        }
+
+        .install-section h3 {
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 25px;
+            margin: 10px 10px 10px 0;
+            transition: all 0.3s ease;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background: #764ba2;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: #667eea;
+        }
+
+        .footer {
+            text-align: center;
+            color: white;
+            padding: 40px 0;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2.5rem;
+            }
+            
+            .main-content {
+                padding: 20px;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚀 EasySLAM</h1>
+            <p>Production-ready Python SLAM package for beginners and advanced users</p>
+            <div class="badges">
+                <a href="https://pypi.org/project/easy-slam/" class="badge">📦 PyPI</a>
+                <a href="https://github.com/Sherin-SEF-AI/easy-slam" class="badge">🐙 GitHub</a>
+                <a href="https://github.com/Sherin-SEF-AI/easy-slam/blob/main/LICENSE" class="badge">📄 MIT License</a>
+                <a href="https://github.com/Sherin-SEF-AI/easy-slam/blob/main/CHANGELOG.md" class="badge">📋 Changelog</a>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="section">
+                <h2>🎯 What is EasySLAM?</h2>
+                <p>EasySLAM is a comprehensive Python package that makes Simultaneous Localization and Mapping (SLAM) accessible to everyone. Whether you're a beginner exploring robotics or an advanced user building complex autonomous systems, EasySLAM provides the tools you need.</p>
+                
+                <div class="install-section">
+                    <h3>🚀 Quick Start</h3>
+                    <div class="code-block">
+pip install easy-slam
+                    </div>
+                    <a href="https://pypi.org/project/easy-slam/" class="btn">Install from PyPI</a>
+                    <a href="https://github.com/Sherin-SEF-AI/easy-slam" class="btn btn-secondary">View on GitHub</a>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>✨ Key Features</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <h4>🎥 Multiple Sensor Support</h4>
+                        <p>Webcam, RealSense, stereo cameras, LiDAR, and dataset playback with unified interface.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>🧠 Advanced Algorithms</h4>
+                        <p>ORB-SLAM, FastSLAM, GraphSLAM, Visual-Inertial SLAM, and RGB-D SLAM implementations.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>🎨 Beautiful GUI</h4>
+                        <p>Modern PyQt6-based interface with real-time visualization, trajectory plotting, and performance monitoring.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>🔧 Easy CLI</h4>
+                        <p>Command-line interface for quick experiments and automation with configurable parameters.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>🧩 Semantic Mapping</h4>
+                        <p>YOLOv8 integration for object detection and semantic understanding of the environment.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h4>📊 Performance Profiling</h4>
+                        <p>Real-time monitoring, FPS tracking, and detailed performance analytics.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>💻 Usage Examples</h2>
+                
+                <h3>Basic Usage</h3>
+                <div class="code-block">
+from easy_slam import EasySLAM
+
+# Initialize with webcam and ORB-SLAM
+slam = EasySLAM(sensor='webcam', algorithm='orb_slam')
+
+# Start processing
+slam.start()
+
+# Stop when done
+slam.stop()
+                </div>
+
+                <h3>Advanced Usage with GUI</h3>
+                <div class="code-block">
+# Launch the GUI
+easy-slam-gui
+
+# Or use CLI with advanced features
+easy-slam --sensor realsense --algorithm rgbd_slam --enable-semantic --enable-fusion
+                </div>
+
+                <h3>Python API</h3>
+                <div class="code-block">
+# Custom configuration
+config = {
+    'sensor': 'realsense',
+    'algorithm': 'rgbd_slam',
+    'enable_semantic': True,
+    'enable_sensor_fusion': True,
+    'output_dir': 'results/'
+}
+
+slam = EasySLAM(**config)
+slam.start()
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>🔧 Installation</h2>
+                
+                <h3>From PyPI (Recommended)</h3>
+                <div class="code-block">
+pip install easy-slam
+                </div>
+
+                <h3>From Source</h3>
+                <div class="code-block">
+git clone https://github.com/Sherin-SEF-AI/easy-slam.git
+cd easy-slam
+pip install -e .
+                </div>
+
+                <h3>Dependencies</h3>
+                <p>EasySLAM automatically installs all required dependencies including OpenCV, NumPy, PyQt6, and more. For advanced features, additional packages like PyRealSense2 and YOLOv8 are installed as needed.</p>
+            </div>
+
+            <div class="section">
+                <h2>📚 Documentation</h2>
+                <p>For detailed documentation, tutorials, and API reference, visit our comprehensive documentation:</p>
+                <ul style="margin-left: 20px; margin-top: 15px;">
+                    <li><a href="https://github.com/Sherin-SEF-AI/easy-slam/blob/main/README.md">📖 README</a> - Getting started guide</li>
+                    <li><a href="https://github.com/Sherin-SEF-AI/easy-slam/tree/main/examples">💡 Examples</a> - Code examples and demos</li>
+                    <li><a href="https://github.com/Sherin-SEF-AI/easy-slam/tree/main/tutorials">🎓 Tutorials</a> - Step-by-step tutorials</li>
+                    <li><a href="https://github.com/Sherin-SEF-AI/easy-slam/blob/main/CONTRIBUTING.md">🤝 Contributing</a> - How to contribute</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>🚀 What's New</h2>
+                <p>EasySLAM v1.0.0 includes:</p>
+                <ul style="margin-left: 20px; margin-top: 15px;">
+                    <li>✅ Production-ready SLAM algorithms</li>
+                    <li>✅ Modern PyQt6 GUI with real-time visualization</li>
+                    <li>✅ Comprehensive CLI interface</li>
+                    <li>✅ Semantic mapping with YOLOv8</li>
+                    <li>✅ Sensor fusion and map merging</li>
+                    <li>✅ Performance profiling and monitoring</li>
+                    <li>✅ Extensive documentation and examples</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Made with ❤️ by <a href="https://github.com/Sherin-SEF-AI">Sherin-SEF-AI</a></p>
+            <p>📧 Questions? <a href="https://github.com/Sherin-SEF-AI/easy-slam/issues">Open an issue</a> on GitHub</p>
+            <p>⭐ Star us on <a href="https://github.com/Sherin-SEF-AI/easy-slam">GitHub</a> if you find this useful!</p>
+        </div>
+    </div>
+</body>
+</html> 
