@@ -4,6 +4,18 @@
 
 🌐 **Website**: https://sherin-sef-ai.github.io/easy-slam/
 
+
+![image](https://github.com/user-attachments/assets/8b986504-fc43-443b-84df-61869e8fcfb7)
+
+
+![Screenshot from 2025-07-08 20-15-16](https://github.com/user-attachments/assets/50c5f952-caa5-4659-872d-3e13a446a247)
+
+![Screenshot from 2025-07-08 20-15-09](https://github.com/user-attachments/assets/f98af136-35de-4f3f-9c36-03659f580b42)
+
+![Screenshot from 2025-07-08 20-15-03](https://github.com/user-attachments/assets/c14b86cb-1b00-442d-9aa0-9f0ccedf7be9)
+
+
+
 [![PyPI version](https://badge.fury.io/py/easy-slam.svg)](https://badge.fury.io/py/easy-slam)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.7+](https://img.shields.io/badge/python-3.7+-blue.svg)](https://www.python.org/downloads/)
